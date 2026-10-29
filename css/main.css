@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:border-box; /*que se adapte el border del navegador*/
+}
+.conteiner-grid {
+  display: grid;
+  grid-template-columns: 1fr 3 fr 3fr 2 fr;
+  /*que las filas se adapten solas al contenido*/
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+nav.menuPrincipal ul li {
+    display: inline-block;
+    grid-template-rows: auto;
+    text-align: center; /* Centrado */
+    margin: 5px 5px;
+    border-width: 3px;/*ancho uniform de 5px de todos los lados*/
+    border-style: solid;/*border solido*/
+    color: rgb(4, 28, 137);
+    list-style-type: georgian;  
+}
+
+p{
+        font-size:1.1rem;
+}
+
+/*en cabezado*/
+.cabeceraMain
+{
+    text-align: center; /* Centrado */
+    font-size: 2.2rem;
+    padding: 20px 0;/*espacio arriba y abajo para que el bloque azul se ea mas alto*/
+    background-color: rgb(67, 117, 193);
+    line-height: 1.3;/*se el titulo se divide ajustar espacio*/    
+    text-decoration: underline;
+    color: rgb(253, 254, 254);
+    grid-column: 1 / 5; /* start 1 end 5 (ocupando 4 columnas)*/
+    width:100%
+}
+
+/*2 separando el titulo securndario para no chocar con el borde azul*/
+.padding-box {
+    width: 200px;
+    padding: 10px; /* Padding uniforme en todos los lados */
+    background-color: lightgreen;
+    grid-column: 3 / 5 /*su función es ocupar el espacio en blanco*/   
+    position: relative;
+    z-index: 2;
+    color: rgb;
+}
+   
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+.caja-imagen {
+    grid-column: 1; /* que vaya a la primera columna*/    
+}
+
+.caja-imagen img {
+    display: bloque;
+    width: 100%; /*Ocupa el 100% del ancho de la columna grid*/
+    height: 50px; /*Ocupa100% del alto de la columna grid*/
+    max-width:50px /*tope*/
+    object-fit: cover; /*Que se adapte perfectamente sin deformarse*/
+    margin:0 auto;
+    }
+
+.caja2Imagen {
+    grid-column: 2; /* que vaya a la primera columna*/    
+}
+
+.caja2Imagen img {
+    width: 100%; /*Ocupa el 100% del ancho de la columna grid*/
+    height: auto; /*Ocupa100% del alto de la columna grid*/
+    object-fit: cover; /*Que se adapte perfectamente sin deformarse*/
+    }
+
+
+.caja3Imagen {
+    grid-column: 1; /* que vaya a la primera columna*/    
+}
+
+.caja3Imagen img {
+    width: 100%; /*Ocupa el 100% del ancho de la columna grid*/
+    height: 100%; /*Ocupa100% del alto de la columna grid*/
+    object-fit: cover; /*Que se adapte perfectamente sin deformarse*/
+    }
+
+.caja4Imagen {
+    grid-column: 3; /* que vaya a la primera columna*/    
+}
+
+.caja4Imagen img {
+    width: 100%; /*Ocupa el 100% del ancho de la columna grid*/
+    height: auto; /*Ocupa100% del alto de la columna grid*/
+    object-fit: cover; /*Que se adapte perfectamente sin deformarse*/
+}
+
+.caja5Imagen {
+    grid-column: 4; /* que vaya a la primera columna*/    
+}
+
+.caja5Imagen img {
+    width: 100%; /*Ocupa el 100% del ancho de la columna grid*/
+    height: auto; /*Ocupa100% del alto de la columna grid*/
+    object-fit: cover; /*Que se adapte perfectamente sin deformarse*/
+}
+
+/*el contenedor padre debe de ser relativo*/
+#inicio {
+position: relative;
+width: 100%;
+min-heigth: 80vh; /*altura da seccion inicio*/
+overflow: hidden;
+}
+.caja-video{
+poition: absolut;
+top: 0;
+left:0;
+width: 100%;
+heigth: 100%;
+z-index: -1; /*para que se envie detrás de todo*/
+}
+.caja-video {
+width: 100%;
+max-width 600px;
+margin:0 auto; /* mantiene el recorte para rellenar el fodo */
+}
+
+.caja-video video{
+width: 100%;
+heigth: auto;
+}
+
+footer {
+    grid-column: 1 / 5; /* Que sea lo mismo que el encabezado*/
+    column-rule-width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/*adaptación para móviles*/
+@media screen and (min-width:768px) {
+    .cabeceraMain div {
+        width: 250px;
+    }
+    
+}
